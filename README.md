@@ -18,7 +18,9 @@
 
 3. **Answer Generation**  
    Produce a well-structured, actionable medical response within 250 words, including:
-   - **Identified Condition**  
+   - **Disclaimer**
+   - **Likely Condition**
+   - **Urgency Level**
    - **First-Aid Steps** 
    - **Key Medication(s)**  
    - **Cited Sources** 
