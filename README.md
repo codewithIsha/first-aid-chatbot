@@ -134,7 +134,7 @@ Each response includes:
 ### Model Specifications
 
 - **Embedding Model:** `all-MiniLM-L6-v2` (384-dimensional sentence embeddings)
-- **LLM Model:** `Llama3-70b-8192` hosted on Groq
+- **LLM Model:** `Groq LLM-llama3-70b-8192`
 - **Similarity Metric:** Cosine similarity
 - **Vector Storage:** In-memory numpy arrays
 
