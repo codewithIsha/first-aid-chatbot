@@ -105,6 +105,65 @@ Each response includes:
 - Immediate first-aid steps
 - Sources (references from local knowledge or web)
 
+---
+---
+
+## Technical Stack
+
+### Core Technologies
+
+- **Language:** Python 3.8+
+- **ML Frameworks:** scikit-learn, sentence-transformers
+- **Data Processing:** pandas, numpy
+- **HTTP Client:** requests
+- **Environment Management:** python-dotenv
+
+---
+
+### External Dependencies
+
+- **Groq API:** For LLM-based inference and reasoning
+- **Serper API:** For web search and real-time evidence retrieval
+- **SentenceTransformer:** For semantic similarity computation
+- **Excel Data File (`adb.xlsx`):** Local medical knowledge base
+
+---
+
+### Model Specifications
+
+- **Embedding Model:** `all-MiniLM-L6-v2` (384-dimensional sentence embeddings)
+- **LLM Model:** `Llama3-70b-8192` hosted on Groq
+- **Similarity Metric:** Cosine similarity
+- **Vector Storage:** In-memory numpy arrays
+
+---
+
+## Security & Safety Features
+
+### Medical Safety
+
+- **Disclaimer Integration:** Every response begins with a medical safety disclaimer
+- **Emergency Prioritization:** Automatically identifies critical symptoms and recommends emergency action
+- **Source Verification:** Information is cross-checked across local and web sources
+
+### API Security
+
+- **Environment Variables:** API keys are securely managed using `.env` files
+
+### Data Privacy
+
+- **No Persistence:** User queries are not stored
+- **Stateless Design:** Each query is processed independently
+- **Local Processing:** All semantic computations are handled locally
+
+---
+
+## Dependencies
+
+- **Python Environment:** Use of virtual environments is recommended
+- **Package Management:** Install via `pip` using `requirements.txt`
+- **API Access:** Requires valid keys for Groq and Serper APIs
+- **Data Files:** `adb.xlsx` must be available in `src/` directory
 
 ---
 
