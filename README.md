@@ -1,4 +1,4 @@
-# First-Aid Chatbot
+# RAG-Powered First-Aid Chatbot for Diabetes, Cardiac & Renal Emergencies
 
 ## Description
 
