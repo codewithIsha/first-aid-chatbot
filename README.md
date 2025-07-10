@@ -1,5 +1,6 @@
+---
 # RAG-Powered First-Aid Chatbot for Diabetes, Cardiac & Renal Emergencies
-
+---
 ## Description
 
 This project is a medical assistant chatbot that helps users with emergency first-aid advice for diabetes, cardiac, and renal-related conditions. It uses:
@@ -10,6 +11,29 @@ This project is a medical assistant chatbot that helps users with emergency firs
 - A response generator to produce structured, helpful replies
 
 The goal is to provide fast, reliable first-aid suggestions based on user symptom queries.
+---
+## Core Objectives
+
+1. **Triage / Diagnosis**  
+   Automatically infer the most likely **medical condition** based on the user's free-text symptom query.
+2. **Hybrid Retrieval**  
+   Retrieve the most relevant medical knowledge using a multi-source fusion strategy:
+   - **Semantic Search:** Local embedding-based search over 60 curated medical knowledge base snippets.
+   - **Keyword Search:** Surface results with overlapping medical terms to improve accuracy and redundancy handling.
+   - **Web Search (Serper.dev):** Query the web for up-to-date medical advice or emergency guidelines.
+
+   > Sign up for an API key at [Serper.dev](https://serper.dev)
+
+   The results from all retrieval components are fused and ranked based on relevance.
+
+3. **Answer Generation**  
+   Produce a well-structured, actionable medical response within 250 words, including:
+   - **Identified Condition**  
+   - **First-Aid Steps** (numbered and actionable)  
+   - **Key Medication(s)**  
+   - **Cited Sources** (local KB or web)
+
+   The response always begins with a medical disclaimer and is optimized for clarity, safety, and practical relevance.
 
 ---
 
