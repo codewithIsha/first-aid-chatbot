@@ -1,18 +1,8 @@
 ---
 # RAG-Powered First-Aid Chatbot for Diabetes, Cardiac & Renal Emergencies
 ---
-## Description
 
-This project is a medical assistant chatbot that helps users with emergency first-aid advice for diabetes, cardiac, and renal-related conditions. It uses:
-
-- A local medical knowledge base
-- A language model (LLM) for symptom classification
-- A hybrid retrieval system to gather relevant information
-- A response generator to produce structured, helpful replies
-
-The goal is to provide fast, reliable first-aid suggestions based on user symptom queries.
----
-## Core Objectives
+## Objectives
 
 1. **Triage / Diagnosis**  
    Automatically infer the most likely **medical condition** based on the user's free-text symptom query.
