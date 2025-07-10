@@ -69,3 +69,5 @@ graph TB
     class KB,Data,Embeddings data
     class GroqAPI,SerperAPI,GroqLLM,Web api
     class Semantic,Keyword,Keywords accent
+ ```
+ </details>
