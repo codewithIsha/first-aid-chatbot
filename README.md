@@ -71,3 +71,100 @@ graph TB
     class Semantic,Keyword,Keywords accent
  ```
  </details>
+
+ ---
+
+## Processing Steps
+
+### Step 1: Triage Classification
+- Normalize and analyze symptoms using Groq LLM
+- Fallback to keyword rules if LLM fails
+- Outputs: domain, condition, confidence, urgency
+
+### Step 2: Multi-Source Retrieval
+- Run semantic and keyword search on local Excel KB
+- Execute real-time web search via Serper API
+- Collect relevant passages and metadata
+
+### Step 3: Result Fusion
+- Aggregate results from all retrieval sources
+- Apply weighted scoring and remove duplicates
+- Rank by relevance and diversity
+
+### Step 4: Response Generation
+- Send fused data to Groq API for structured guidance
+- Insert medical disclaimers and citations
+- Produce final first-aid response (≤ 250 words)
+
+---
+
+ # FirstAidChatbot – Component Details
+
+---
+
+## Component Overview
+
+### 1. FirstAidChatbot (Main Controller)
+**Role:** Central orchestrator managing the query processing pipeline  
+**Responsibilities:**
+- Receive and preprocess queries
+- Invoke triage, retrieval, fusion, and generation steps sequentially
+- Handle fallbacks and error recovery
+
+### 2. Triage Classification (`LLMTriageClassifier`)
+**Primary:** Groq LLM for symptom classification and urgency scoring  
+**Fallback:** Keyword-based pattern matching for core medical terms  
+**Outputs:**
+- `domain`: diabetes, cardiac, or renal
+- `condition`: specific subtype (e.g., Hyperglycemia, Myocardial Infarction)
+- `confidence`: 0–1 score
+- `urgency`: low, medium, high
+
+### 3. Knowledge Retrieval (`MedicalKnowledgeBase`)
+**Semantic Search:** SentenceTransformer embeddings for similarity matching  
+**Keyword Search:** Exact term matching on Excel repository  
+**Data Source:** `.xlsx` file organized by domain and condition
+
+### 4. External Knowledge (`WebSearcher`)
+**API:** Serper for real-time web information  
+**Enhancement:** Adds domain context to queries  
+**Mock Mode:** Returns placeholder results if API fails
+
+### 5. Result Fusion and Ranking
+**Algorithm:**
+1. Aggregate results from semantic, keyword, and web sources
+2. Score each result by weighted relevance (configurable)
+3. Deduplicate based on title/text overlap
+4. Sort by final relevance score
+
+### 6. Response Generation (`GroqLLMClient`)
+**Model:** Llama3-70b-8192 via Groq API  
+**Template Output:** Structured JSON-like response with:
+- Summary of the condition
+- Step-by-step first-aid advice (≤ 250 words)
+- Citations and disclaimers  
+**Fallback:** Static templates on API failure
+
+---
+
+## Data Flow
+
+1. User Input → normalization & safety checks  
+2. Triage Classification → domain, condition, confidence, urgency  
+3. Knowledge Retrieval → semantic + keyword + web results  
+4. Result Fusion & Ranking → merged, scored, and sorted results  
+5. Response Generation → final structured output  
+6. Output → JSON response to user
+
+---
+
+## Design Trade-offs
+
+- **Local vs. External:** Balances latency (local KB) with freshness (web search)
+- **Determinism vs. Flexibility:** Ensures minimum response coverage through keyword fallbacks
+
+---
+
+---
+
+
