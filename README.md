@@ -58,7 +58,7 @@ cd first-aid-chatbot
 2. **Install dependencies**
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt `[requirements.txt](./requirements.txt)`
 
 ```
 
