@@ -155,7 +155,6 @@ graph TB
 3. Knowledge Retrieval → semantic + keyword + web results  
 4. Result Fusion & Ranking → merged, scored, and sorted results  
 5. Response Generation → final structured output  
-6. Output → JSON response to user
 
 ---
 
