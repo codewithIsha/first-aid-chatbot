@@ -1,0 +1,9 @@
+pandas
+numpy
+requests
+sentence-transformers
+scikit-learn
+python-dotenv
+transformers
+pytest
+openpyxl
