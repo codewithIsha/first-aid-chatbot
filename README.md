@@ -19,9 +19,9 @@
 3. **Answer Generation**  
    Produce a well-structured, actionable medical response within 250 words, including:
    - **Identified Condition**  
-   - **First-Aid Steps** (numbered and actionable)  
+   - **First-Aid Steps** 
    - **Key Medication(s)**  
-   - **Cited Sources** (local KB or web)
+   - **Cited Sources** 
 
    The response always begins with a medical disclaimer and is optimized for clarity, safety, and practical relevance.
 
