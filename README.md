@@ -83,11 +83,12 @@ The chatbot will classify the condition, retrieve relevant guidance, and return 
 ## Example Outputs
 
 Each response includes:
+- A disclaimer for medical safety
 - A likely diagnosis (e.g. "Myocardial Infarction")
 - Urgency level (e.g. "Critical")
 - Actionable first-aid instructions
 - Referenced sources from local knowledge or web
-- A disclaimer for medical safety
+
 
 ---
 
