@@ -139,7 +139,7 @@ graph TB
 4. Sort by final relevance score
 
 ### 6. Response Generation (`GroqLLMClient`)
-**Model:** Llama3-70b-8192 via Groq API  
+**Model:** Groq LLM-llama3-70b-8192  
 **Template Output:** Structured JSON-like response with:
 - Summary of the condition
 - Step-by-step first-aid advice (≤ 250 words)
