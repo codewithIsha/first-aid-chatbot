@@ -58,7 +58,7 @@ cd first-aid-chatbot
 2. **Install dependencies**
 
 ```bash
-pip install -r requirements.txt
+pip install (requirements.txt).
 ```
 
 3. **Set up API keys**
