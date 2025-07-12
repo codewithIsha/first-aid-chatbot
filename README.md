@@ -36,7 +36,6 @@ project/
 │
 ├── src/
 │   └── main.py          # Core chatbot implementation
-│
 ├── tests/
 │   └── test.py          # Unit tests for chatbot behavior
 │
