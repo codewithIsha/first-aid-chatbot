@@ -36,9 +36,10 @@ project/
 │
 ├── src/
 │   └── main.py          # Core chatbot implementation
+│
 ├── tests/
 │   └── test.py          # Unit tests for chatbot behavior
-│
+
 ├── requirements.txt     # Required Python libraries
 ├── README.md            # Project documentation
 ├── architecture.md      # System architecture and design rationale
