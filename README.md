@@ -35,8 +35,7 @@
 project/
 │
 ├── src/
-│   ├── main.py          # Core chatbot implementation
-│   └── adb.xlsx         # Local medical knowledge base
+│   └── main.py          # Core chatbot implementation
 │
 ├── tests/
 │   └── test.py          # Unit tests for chatbot behavior
